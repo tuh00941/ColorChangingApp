@@ -3,12 +3,14 @@ package edu.temple.colorchangingapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class PaletteActivity extends AppCompatActivity {
 
@@ -23,20 +25,11 @@ public class PaletteActivity extends AppCompatActivity {
 
         gridView = findViewById(R.id.grid_view);
 
-        final ArrayList<String> colors = new ArrayList<>();
+        Resources res = this.getResources();
 
-        colors.add("red");
-        colors.add("blue");
-        colors.add("green");
-        colors.add("magenta");
-        colors.add("yellow");
-        colors.add("black");
-        colors.add("white");
-        colors.add("purple");
-        colors.add("cyan");
-        colors.add("lime");
-        colors.add("gray");
-        colors.add("maroon");
+        String[] colores = res.getStringArray(R.array.colors);
+
+        final ArrayList<String> colors = (ArrayList<String>) Arrays.asList(colores);
 
         ColorAdapter adapter = new ColorAdapter(PaletteActivity.this, colors);
 
