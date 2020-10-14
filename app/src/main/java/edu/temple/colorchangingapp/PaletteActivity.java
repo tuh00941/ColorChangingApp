@@ -29,9 +29,9 @@ public class PaletteActivity extends AppCompatActivity {
 
         String[] colores = res.getStringArray(R.array.colors);
 
-        final ArrayList<String> colors = (ArrayList<String>) Arrays.asList(colores);
+        final ArrayList<String> colors = new ArrayList<>(Arrays.asList(colores));
 
-        ColorAdapter adapter = new ColorAdapter(PaletteActivity.this, colors);
+        final ColorAdapter adapter = new ColorAdapter(PaletteActivity.this, colors);
 
         gridView.setAdapter(adapter);
 
@@ -40,6 +40,7 @@ public class PaletteActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent canvasActivityIntent = new Intent(PaletteActivity.this, CanvasActivity.class);
                 canvasActivityIntent.putExtra("color", colors.get(position));
+                canvasActivityIntent.putExtra("englishColor", adapter.englishColors.get(position));
                 startActivity(canvasActivityIntent);
             }
         });

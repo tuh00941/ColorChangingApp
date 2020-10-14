@@ -20,7 +20,7 @@ public class CanvasActivity extends AppCompatActivity {
         layout = findViewById(R.id.layout);
         textView = findViewById(R.id.textView);
 
-        layout.setBackgroundColor(Color.parseColor(getIntent().getStringExtra("color")));
+        layout.setBackgroundColor(Color.parseColor(getIntent().getStringExtra("englishColor")));
         textView.setText(getIntent().getStringExtra("color"));
     }
 }
