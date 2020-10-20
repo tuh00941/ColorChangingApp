@@ -1,20 +1,20 @@
 <resources>
-    <string name="app_name">Color Changing App</string>
-    <string name="palette">Palette Activity</string>
-    <string name="canvas">Canvas Activity</string>
-    <string name="welcome">Click a color below to launch the Canvas</string>
+    <string name="app_name">Application de changement de couleur</string>
+    <string name="palette">Activité de la palette</string>
+    <string name="canvas">Activité de toile</string>
+    <string name="welcome">Cliquez sur une couleur ci-dessous pour lancer le canevas</string>
     <string-array name="colors">
-        <item>red</item>
-        <item>blue</item>
-        <item>green</item>
+        <item>rouge</item>
+        <item>bleu</item>
+        <item>vert</item>
         <item>magenta</item>
-        <item>yellow</item>
-        <item>black</item>
-        <item>white</item>
-        <item>purple</item>
+        <item>Jaune</item>
+        <item>noir</item>
+        <item>blanc</item>
+        <item>violet</item>
         <item>cyan</item>
-        <item>lime</item>
-        <item>gray</item>
-        <item>maroon</item>
+        <item>citron vert</item>
+        <item>gris</item>
+        <item>bordeaux</item>
     </string-array>
 </resources>
