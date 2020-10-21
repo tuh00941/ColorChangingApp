@@ -85,7 +85,7 @@ public class PaletteFragment extends Fragment {
 
         gridView = l.findViewById(R.id.grid_view);
 
-        final ColorAdapter adapter = new ColorAdapter(Objects.requireNonNull(this.getActivity()), colors);
+        final ColorAdapter adapter = new ColorAdapter((Context) parentActivity, colors);
 
         gridView.setAdapter(adapter);
 
